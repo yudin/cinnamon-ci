@@ -1,0 +1,12 @@
+---
+- name: copy daemon install package
+  copy: src=daemon_0.6.4-1_amd64.deb dest=/tmp/daemon_0.6.4-1_amd64.deb owner=root group=root mode=0644
+
+- name: install daemon
+  command: /usr/bin/dpkg -i /tmp/daemon_0.6.4-1_amd64.deb
+
+- name: copy jenkins install package
+  copy: src=jenkins_1.577_all.deb dest=/tmp/jenkins_1.577_all.deb owner=root group=root mode=0644
+
+- name: install jenkins
+  command: /usr/bin/dpkg -i /tmp/jenkins_1.577_all.deb
