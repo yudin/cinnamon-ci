@@ -1,0 +1,18 @@
+---
+#- name: Enable jenkins site
+#  command: /usr/sbin/a2ensite jenkins
+#  notify: Reload Jenkins
+#  sudo: yes  
+
+#- name: Enable proxy module
+#  command: /usr/sbin/a2enmod proxy proxy_http
+#  notify: Restart Jenkins
+#  sudo: yes  
+
+- name: Reload Jenkins
+  command: /etc/init.d/jenkins force-reload
+  sudo: yes
+
+- name: Restart Jenkins
+  command: /etc/init.d/jenkins restart
+  sudo: yes
