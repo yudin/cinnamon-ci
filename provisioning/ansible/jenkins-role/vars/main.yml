@@ -3,3 +3,6 @@ jenkins:
   cli_dest: /tmp/jenkins-cli.jar
   home: /var/lib/jenkins
   updates: /var/lib/jenkins/updates
+
+git:
+  repo: https://github.com/yudiatsfdc/df14.git

@@ -40,3 +40,11 @@
 
 - name: Install job 
   shell: java -jar {{ jenkins.cli_dest }} -s http://localhost:8080 create-job cinnamon < /tmp/job-config.xml 
+
+- name: update packages
+  sudo: yes
+  command: /usr/bin/apt-get update
+
+- name: install ant
+  sudo: yes
+  command: /usr/bin/apt-get -y install ant
